@@ -773,7 +773,9 @@ const ResetPasswordPart = ({newPassword, setNewPassword, passwordEdit, setPasswo
         const response = await axios.put(
           `https://blogging-app-server.herokuapp.com/api/users/${user._id}`,
           {userId: user._id, password: newPassword, confirmPassword}
-        );
+        ).then(res => {
+          setPasswordEdit(false);
+        })
       } catch(error) {
         setShowError(true);
         console.log(error);
