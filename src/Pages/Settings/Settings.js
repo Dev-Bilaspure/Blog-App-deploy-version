@@ -774,6 +774,8 @@ const ResetPasswordPart = ({newPassword, setNewPassword, passwordEdit, setPasswo
           `https://blogging-app-server.herokuapp.com/api/users/${user._id}`,
           {userId: user._id, password: newPassword, confirmPassword}
         ).then(res => {
+          setNewPassword('');
+          setConfirmPassword('');
           setPasswordEdit(false);
         })
       } catch(error) {
