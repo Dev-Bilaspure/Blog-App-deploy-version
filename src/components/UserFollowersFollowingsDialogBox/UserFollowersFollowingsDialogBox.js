@@ -37,7 +37,7 @@ const UserFollowersFollowingsDialogBox = (props) => {
           `https://blogging-app-server.herokuapp.com/api/users/${profileUsersId}/followers`
         ).then(res => {
           setFollowers(res.data);
-          console.log("followers", res.data);
+          // console.log("followers", res.data);
           setIsFectching(false);
         })
       } catch(error) {
@@ -52,7 +52,7 @@ const UserFollowersFollowingsDialogBox = (props) => {
           `https://blogging-app-server.herokuapp.com/api/users/${profileUsersId}/followings`
         ).then(res => {
           setFollowings(res.data);
-          console.log("followings", res.data);
+          // console.log("followings", res.data);
           setIsFectching(false);
         })
       } catch(error) {
@@ -63,7 +63,7 @@ const UserFollowersFollowingsDialogBox = (props) => {
     fetchFollowings();
     fetchFollowers();
   }, [profileUsersId])
-  console.log(dialogBoxType);
+  // console.log(dialogBoxType);
   const classes = useStyle();
   return (
     <div >
@@ -130,7 +130,7 @@ const UsersListItem = ({user, usersListItem}) => {
         {userId: user._id}
       ).then(res => {
         loginSuccess(res.data);
-        console.log(res.data);
+        // console.log(res.data);
         setIsFollowing(!isFollowing);
       })
     } catch(error) {

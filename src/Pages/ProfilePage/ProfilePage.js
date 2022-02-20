@@ -20,7 +20,7 @@ const ProfilePage = ({user}) => {
   const location = useLocation();
 
   const params = useParams();
-  console.log(params);
+  // console.log(params);
   const {loginSuccess} = useContext(UserContext);
 
   const username = location.pathname.split('/')[2].substr(1);
@@ -54,7 +54,7 @@ const ProfilePage = ({user}) => {
           user && setIsFollowing(user.followings.includes(userkiId));
           
           setProfileUsersId(userkiId)
-          console.log("kkkkkm", profileUsersId.toString(), isFollowing);
+          // console.log("kkkkkm", profileUsersId.toString(), isFollowing);
           return(res.data._id);
         }).then(res => {
           fetchUsersPosts(res);
@@ -75,7 +75,7 @@ const ProfilePage = ({user}) => {
           `https://blogging-app-server.herokuapp.com/api/users/${respId}/published`
         ).then(res => {
           setUsersPosts(res.data);
-          console.log(usersPosts);
+          // console.log(usersPosts);
           setIsFetchingUsersPosts(false);
         }).catch(err => {
           console.log(err);
@@ -118,7 +118,7 @@ const ProfilePage = ({user}) => {
           {userId: user._id}
         ).then(res => {
           loginSuccess(res.data);
-          console.log(res.data);
+          // console.log(res.data);
           setIsFollowing(!isFollowing);
         })
       } catch(error) {
@@ -305,7 +305,7 @@ const PostByUser = ({user, post}) => {
         `https://blogging-app-server.herokuapp.com/api/posts/${post._id}/like`,
         {userId: user._id}
       ).then(res => {
-        console.log(res.data);
+        // console.log(res.data);
         if(isLiked)
           setLikes(likes-1);
         else
@@ -327,7 +327,7 @@ const PostByUser = ({user, post}) => {
         {userId: user._id}
       ).then(res => {
         loginSuccess(res.data);
-        console.log(res.data);
+        // console.log(res.data);
         setIsBookmarked(!isBookmarked)
       })
     } catch(error) {

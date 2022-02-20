@@ -79,13 +79,13 @@ const SignUp = ({handleTabChange}) => {
     setServerError(false);
     handleShowErrorMsg();
     try {
-      console.log("waiting")
+      // console.log("waiting")
       setIsFetching(true);
       const response = await axios.post(
         'https://blogging-app-server.herokuapp.com/api/auth/register',
         {name, email, username, password, confirmPassword}
       ).then(res => {
-        console.log(res.data);
+        // console.log(res.data);
         res.data && navigate('/signin');
         if(res.data)
           setIsFetching(false);
@@ -100,7 +100,7 @@ const SignUp = ({handleTabChange}) => {
       setServerError(true);
       console.log(serverError)
     }
-    console.log('SignUp form submitted');
+    // console.log('SignUp form submitted');
   }
 
   //error show handler

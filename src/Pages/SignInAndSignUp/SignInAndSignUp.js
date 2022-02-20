@@ -37,7 +37,7 @@ const SignInAndSignUp = ({val, setUser}) => {
   }, [path])
 
   const handleTabChange = (event, newValue) => {
-    console.log(newValue);
+    // console.log(newValue);
     if(newValue!==value) {
       if(newValue===0)
         navigate('/signin');

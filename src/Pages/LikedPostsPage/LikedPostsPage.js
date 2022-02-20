@@ -56,7 +56,7 @@ const LikedPostsPage = () => {
           `https://blogging-app-server.herokuapp.com/api/users/${user._id}/liked`
         ).then(res => {
           setLikedPosts(res.data);
-          console.log(res.data);
+          // console.log(res.data);
           setIsFetching(false);
         }).catch(err => {
           console.log(err);

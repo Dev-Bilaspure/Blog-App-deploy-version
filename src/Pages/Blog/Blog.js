@@ -105,7 +105,7 @@ const Blog = ({user}) => {
           {userId: user._id}
         ).then(res => {
           loginSuccess(res.data);
-          console.log(res.data);
+          // console.log(res.data);
           setIsFollowing(!isFollowing);
         })
       } catch(error) {
@@ -124,7 +124,7 @@ const Blog = ({user}) => {
           `https://blogging-app-server.herokuapp.com/api/posts/${postID}/like`,
           {userId: user._id}
         ).then(res => {
-          console.log(res.data);
+          // console.log(res.data);
           if(isLiked)
             setLikes(likes-1);
           else
@@ -146,7 +146,7 @@ const Blog = ({user}) => {
         {userId: user._id}
       ).then(res => {
         loginSuccess(res.data);
-        console.log(res.data);
+        // console.log(res.data);
         setIsBookmarked(user.bookmarks.includes(postID))
       })
     } catch(error) {

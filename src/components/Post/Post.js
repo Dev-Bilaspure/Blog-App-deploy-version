@@ -45,7 +45,7 @@ const Post = ({user, post}) => {
         {userId: user._id}
       ).then(res => {
         loginSuccess(res.data);
-        console.log(res.data);
+        // console.log(res.data);
         setIsBookmarked(!isBookmarked);
       })
     } catch(error) {
@@ -62,7 +62,7 @@ const Post = ({user, post}) => {
           setAuthorName(res.data.name);
           setProfilePic(res.data.profilePicture);
           setAuthorUsername(res.data.username);
-          console.log('dmekmkmek', profilePic);
+          // console.log('dmekmkmek', profilePic);
         }).catch(err => {
           console.log(err);
         })

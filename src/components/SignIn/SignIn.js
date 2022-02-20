@@ -62,11 +62,11 @@ const SignIn = ({handleTabChange, setUser}) => {
         // res.data && 
         if(res.data) {
           loginSuccess(obj);
-          console.log(res.data);
+          // console.log(res.data);
           setServerError(false);
           navigate(location.state.from || '/');
         }
-        console.log(res.data);
+        // console.log(res.data);
       }).catch(err => {
         console.log(err);
         setServerError(true);
@@ -81,7 +81,7 @@ const SignIn = ({handleTabChange, setUser}) => {
       setPassword('');
       loginFailure();
     }
-    console.log("form submitted");
+    // console.log("form submitted");
   }
  
   const handleShowErrorMsg = () => {

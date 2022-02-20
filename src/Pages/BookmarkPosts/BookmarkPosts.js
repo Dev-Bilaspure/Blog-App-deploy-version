@@ -58,7 +58,7 @@ const BookmarkPosts = () => {
           // console.log(res.data);
           setIsFetching(false);
           setBookmarkedPosts(res.data);
-          console.log(bookmarkedPosts);
+          // console.log(bookmarkedPosts);
         })
       } catch(error) {
         setIsFetching(false);

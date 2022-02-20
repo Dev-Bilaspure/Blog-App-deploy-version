@@ -79,7 +79,7 @@ const Write = () => {
               'https://blogging-app-server.herokuapp.com/api/upload',
               {base64EncodedImage: reader.result}
             ).then(res => {
-              console.log(res.data.imageURL)
+              // console.log(res.data.imageURL)
               postObj.img = res.data.imageURL;
               uploadPostNow(postObj);
             })
@@ -118,7 +118,7 @@ const Write = () => {
               'https://blogging-app-server.herokuapp.com/api/upload',
               {base64EncodedImage: reader.result}
             ).then(res => {
-              console.log(res.data.imageURL)
+              // console.log(res.data.imageURL)
               postObj.img = res.data.imageURL;
               uploadPostNow(postObj);
             })
@@ -157,7 +157,7 @@ const Write = () => {
               'https://blogging-app-server.herokuapp.com/api/upload',
               {base64EncodedImage: reader.result}
             ).then(res => {
-              console.log(res.data.imageURL)
+              // console.log(res.data.imageURL)
               postObj.img = res.data.imageURL;
               uploadPostNow(postObj);
             })
@@ -196,7 +196,7 @@ const Write = () => {
               'https://blogging-app-server.herokuapp.com/api/upload',
               {base64EncodedImage: reader.result}
             ).then(res => {
-              console.log(res.data.imageURL)
+              // console.log(res.data.imageURL)
               postObj.img = res.data.imageURL;
               uploadPostNow(postObj);
             })
@@ -334,7 +334,7 @@ const AddCategories = ({selectedCategories, setSelectedCategories}) => {
   const handleChange = (e) => {
     setFakeSelectedCategories([... e.target.value]);
   }
-  console.log(selectedCategories);
+  // console.log(selectedCategories);
   return(
     <div style={{paddingLeft: 5}}>
       <div style={{color: 'rgb(54, 54, 54)', paddingTop: 6, paddingLeft: 7, fontSize: 25, lineHeight: 1.2, paddingBottom: 20, fontFamily: `'Raleway', 'sans-serif'`}}>

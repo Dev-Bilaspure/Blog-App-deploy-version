@@ -164,7 +164,7 @@ const HomePagePosts = ({user}) => {
           `https://blogging-app-server.herokuapp.com/api/posts`
         ).then(res => {
           setGeneralPosts(res.data);
-          console.log(generalPosts);
+          // console.log(generalPosts);
           setIsFetching(false);
         })
       } catch(error) {

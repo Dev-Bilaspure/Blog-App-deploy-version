@@ -106,7 +106,7 @@ const RankedUser = ({rankedUser, user}) => {
         {userId: user._id}
       ).then(res => {
         loginSuccess(res.data);
-        console.log(res.data);
+        // console.log(res.data);
         setIsFollowing(!isFollowing);
       })
     } catch(error) {

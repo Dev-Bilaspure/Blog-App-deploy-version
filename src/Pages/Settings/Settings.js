@@ -137,7 +137,7 @@ const NameEditPart = ({setNameEdit, nameEdit, setNewName, newName}) => {
           `https://blogging-app-server.herokuapp.com/api/users/${user._id}`,
           {userId: user._id, name: newName}
         ).then(res => {
-          console.log(res.data);
+          // console.log(res.data);
           loginSuccess(res.data);
         })
         setNameEdit(false);
@@ -248,7 +248,7 @@ const ShortBioPart = ({ shortBioEdit, setShortBioEdit, newShortBio, setNewShortB
         `https://blogging-app-server.herokuapp.com/api/users/${user._id}`,
         {userId: user._id, shortBio: newShortBio}
       ).then(res => {
-        console.log(res.data);
+        // console.log(res.data);
         loginSuccess(res.data);
       })
       setShortBioEdit(false);
@@ -400,7 +400,7 @@ const PhotoPartImgNButtonSet = ({photoEdit, setPhotoEdit}) => {
         `https://blogging-app-server.herokuapp.com/api/users/${user._id}`,
         {userId: user._id, profilePicture: imgURL}
       ).then(res => {
-        console.log(res.data);
+        // console.log(res.data);
         loginSuccess(res.data);
         setEditedProfilePicture(null);
       })
@@ -420,7 +420,7 @@ const PhotoPartImgNButtonSet = ({photoEdit, setPhotoEdit}) => {
               'https://blogging-app-server.herokuapp.com/api/upload',
               {base64EncodedImage: reader.result}
             ).then(res => {
-              console.log(res.data.imageURL)
+              // console.log(res.data.imageURL)
               updateProfilePic(res.data.imageURL)
             })
           } catch (err) {
@@ -503,7 +503,7 @@ const UsernameEditPart = ({usernameEdit, setUsernameEdit, newUsername, setNewUse
           `https://blogging-app-server.herokuapp.com/api/users/${user._id}`,
           {userId: user._id, username: newUsername}
         ).then(res => {
-          console.log(res.data);
+          // console.log(res.data);
           loginSuccess(res.data);
         })
         setUsernameEdit(false);
@@ -635,7 +635,7 @@ const EmailEditPart = ({emailEdit, setEmailEdit, newEmail, setNewEmail}) => {
           `https://blogging-app-server.herokuapp.com/api/users/${user._id}`,
           {userId: user._id, email: newEmail}
         ).then(res => {
-          console.log(res.data);
+          // console.log(res.data);
           loginSuccess(res.data);
         })
         setEmailEdit(false);
@@ -783,7 +783,7 @@ const ResetPasswordPart = ({newPassword, setNewPassword, passwordEdit, setPasswo
         console.log(error);
       }
     }
-    console.log('password save clicked');
+    // console.log('password save clicked');
   }
   return(
     <div>

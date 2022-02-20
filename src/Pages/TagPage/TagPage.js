@@ -149,7 +149,7 @@ const CategoryRelatedPosts = ({tagRelatedPosts, categoryText}) => {
       {
         tagRelatedPosts.length
         ? tagRelatedPosts.map(post => {
-          console.log(post);
+          // console.log(post);
           return(<Post post={post}/>)
         })
         :
