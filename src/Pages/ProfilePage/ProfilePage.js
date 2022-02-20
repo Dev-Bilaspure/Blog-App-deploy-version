@@ -247,12 +247,13 @@ const UserDescriptionForSmallScreen = ({profilePic, shortBio}) => {
                 src={profilePic} 
                 alt="person image"
                 className='userPhotoForTop'
+                style={{borderRadius: 3}}
               />
             }
             
           </Box>
         </Grid>
-        <Grid item  lg={8} md={8} sm={9} xs={7}>
+        <Grid item  lg={8} md={8} sm={9} xs={6}>
           <Box className='userDescForTop'>
             {shortBio.length ? shortBio : `Hey there, I'm here to share, what I learn and to connect. Hit the follow button and to track my posts.`}
           </Box>
