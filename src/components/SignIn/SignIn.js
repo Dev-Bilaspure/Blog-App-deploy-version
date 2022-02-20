@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react'
+import React, {useState, useContext, useEffect} from 'react'
 import { TextField, Button, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles';
 import {Link, useLocation, useNavigate, Navigate} from 'react-router-dom';
@@ -25,6 +25,10 @@ const SignIn = ({handleTabChange, setUser}) => {
   const classes = useStyle();
   const location = useLocation();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = 'Maadhyam | Signin'
+  }, [])
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

@@ -73,8 +73,8 @@ const Post = ({user, post}) => {
     fetchAuthorInfo();
   }, [])
   return(
-    <div style={{marginBottom: 70}}>
-      <Grid container style={{paddingBottom: 4}}>
+    <div style={{marginBottom: 40}}>
+      <Grid container style={{paddingBottom: 0}}>
         <Grid item>
           <Link to={`/profile/@${authorUsername}`} style={{color: 'inherit', textDecoration: 'none'}}>
             <img 
@@ -153,7 +153,7 @@ const Post = ({user, post}) => {
           </Link>
         </Grid>
         
-        <div style={{paddingTop: 15}}>
+        <div style={{paddingTop: 3}}>
           <CategoryTags categories={post.tags}/>
         </div>
       </Grid>

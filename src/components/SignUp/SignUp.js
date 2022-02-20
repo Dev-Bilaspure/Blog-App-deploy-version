@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react'
+import React, {useContext, useState, useEffect} from 'react'
 import { TextField, Button, Typography } from '@material-ui/core'
 import { useNavigate, Navigate} from 'react-router-dom';
 import { makeStyles } from '@material-ui/styles';
@@ -33,6 +33,10 @@ const SignUp = ({handleTabChange}) => {
   const classes = useStyle();
   const {user} = useContext(UserContext)
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = 'Maadhyam | Signup'
+  }, [])
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');

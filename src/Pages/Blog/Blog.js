@@ -10,6 +10,7 @@ import DeletePostWarningDialogBox from '../../components/DeletePostWarningDialog
 import axios from 'axios'
 import {UserContext} from './../../context/UserContext'
 import { Snackbar } from '@mui/material';
+import CommentIcon from '@mui/icons-material/Comment';
 
 const PF = 'https://blogging-app-server.herokuapp.com/images/'
 const defaultUserPic = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'
@@ -42,14 +43,6 @@ const Blog = ({user}) => {
   const [authorUsername, setAuthorUsername] = useState('');
 
   
-  // const [openBookmarkSnakbar, setOpenBookmarkSnakbar] = useState(false);
-  // <Snackbar
-  //   open={openBookmarkSnakbar}
-  //   autoHideDuration={6000}
-  //   onClose={handleClose}
-  //   message="Note archived"
-  //   action={action}
-  // />
   
   useEffect(() => {
     const fetchBlogData = async () => {
@@ -291,6 +284,9 @@ const LikeNBookmark = ({isLiked, likes, isBookmarked, handleClickLike, handleCli
               : <i className="far fa-bookmark" style={{marginLeft: 40, color: 'rgb(41,41,41)'}} onClick={handleClickBookmark}></i>
             }
           </Grid>
+          {/* <Grid item> 
+            <CommentIcon style={{color: 'rgb(71,71,71)'}}/>
+          </Grid> */}
         </Grid> 
     </Box>
   );
